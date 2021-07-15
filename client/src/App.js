@@ -1,7 +1,18 @@
+import { useState } from "react";
 import "./App.css";
-
+import NavComp from "./components/navcomp/navcomp";
 function App() {
-  return <div className="App"></div>;
+  const [category, setCategory] = useState("general");
+
+  const news = async () => {
+    try {
+    } catch (err) {}
+  };
+  return (
+    <div className="App">
+      <NavComp setCategory={setCategory} />
+    </div>
+  );
 }
 
 export default App;
