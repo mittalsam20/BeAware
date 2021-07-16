@@ -23,11 +23,9 @@ a:active {
     justify-content: space-between;
 }
 
-.author {
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 22px;
-    color: #808290;
+.dateauthor {
+    display: flex;
+    justify-content: space-between;
 }
 
 .lowerNewsText {
@@ -62,7 +60,10 @@ a:active {
 }
 
 .muted {
-    font-weight: 100;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 22px;
+    color: #808290;
 }
 
 .description {
