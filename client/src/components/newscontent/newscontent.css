@@ -1,0 +1,20 @@
+.headermessage {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 40px;
+    margin: 20px 0 35px 0;
+    color: red;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.16), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.headertext {
+    flex: 2;
+}
+
+@media (max-width:995px) {
+    .headermessage {
+        display: none;
+    }
+}
