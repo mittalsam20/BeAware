@@ -13,6 +13,13 @@
     flex: 2;
 }
 
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media (max-width:995px) {
     .headermessage {
         display: none;
