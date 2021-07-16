@@ -27,6 +27,7 @@ function App() {
   useEffect(() => {
     newsApi();
     console.log(loadMore);
+    // eslint-disable-next-line
   }, [newsResult, category, loadMore]);
 
   return (
