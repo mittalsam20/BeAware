@@ -8,11 +8,12 @@ function App() {
   const [category, setCategory] = useState("general");
   const [newsArr, setNewsarr] = useState([]);
   const [newsResult, setNewsresult] = useState();
+  const [loadMore, setLoadmore] = useState(20);
   const newsApi = async () => {
     try {
       const key = "f0e005d11bb14900bea17b8c4faa709a";
       const news = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=in&apiKey=${key}&category=${category}`
+        `https://newsapi.org/v2/top-headlines?country=in&apiKey=${key}&category=${category}&pageSize=${loadMore}`
       );
       console.log(news.data);
       console.log(news.data.articles);
@@ -25,12 +26,18 @@ function App() {
 
   useEffect(() => {
     newsApi();
-  }, [newsResult, category]);
+    console.log(loadMore);
+  }, [newsResult, category, loadMore]);
 
   return (
     <div className="App">
       <NavComp setCategory={setCategory} />
-      <NewsContent newsArr={newsArr} newsResult={newsResult} />
+      <NewsContent
+        newsArr={newsArr}
+        newsResult={newsResult}
+        loadMore={loadMore}
+        setLoadmore={setLoadmore}
+      />
       <Footer />
     </div>
   );

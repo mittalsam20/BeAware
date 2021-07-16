@@ -20,6 +20,15 @@
     align-items: center;
 }
 
+.loadmore {
+    cursor: pointer;
+    border: none !important;
+    padding: 8px 27px !important;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.16), 0 2px 1px 0 rgba(0, 0, 0, 0.12) !important;
+    font-size: 13px;
+    margin-top: -15px;
+}
+
 @media (max-width:995px) {
     .headermessage {
         display: none;

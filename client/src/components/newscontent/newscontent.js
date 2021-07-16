@@ -1,7 +1,9 @@
 import Container from "@material-ui/core/Container";
 import "./newscontent.css";
 import NewsCard from "../newscard/newscard";
-const NewsContent = ({ newsArr, newsResult }) => {
+import Button from "@material-ui/core/Button";
+const NewsContent = ({ newsArr, newsResult, loadMore, setLoadmore }) => {
+  console.log(newsResult, loadMore);
   return (
     <>
       <div>
@@ -21,6 +23,21 @@ const NewsContent = ({ newsArr, newsResult }) => {
             {newsArr.map((item) => {
               return <NewsCard Key={item.title} item={item} />;
             })}
+
+            {loadMore <= newsResult && (
+              <>
+                <hr />
+                <Button
+                  className="loadmore"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setLoadmore(loadMore + 5);
+                  }}
+                >
+                  Load More
+                </Button>
+              </>
+            )}
           </div>
         </Container>
       </div>
